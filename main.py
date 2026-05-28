@@ -68,7 +68,7 @@ def check_region(message):
             else:
                 bot.edit_message_text("❌ Account ရှာမတွေ့ပါဘူး။ ID နဲ့ Zone ပြန်စစ်ပေးပါ။", chat_id=message.chat.id, message_id=status_msg.message_id)
         else:
-            bot.edit_message_text("📶 Server API မှာ ပြဿနာတက်နေလို့ ခဏနေမှ ပြန်ကြိုးစားကြည့်ပါသတ်ကြီး။", chat_id=message.chat.id, message_id=status_msg.message_id)
+            bot.edit_message_text("📶 Server API မှာ ပြဿနာတက်နေလို့ ခဏနေမှ ပြန်ကြိုးစားကြည့်ပါသားကြီး။", chat_id=message.chat.id, message_id=status_msg.message_id)
 
     except requests.exceptions.Timeout:
         bot.edit_message_text("⏳ Connection timed out! API က အကြောင်းမပြန်တော့လို့ပါ။", chat_id=message.chat.id, message_id=status_msg.message_id)
