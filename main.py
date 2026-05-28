@@ -7,7 +7,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 # ℹ️ MLBB Region/Account စစ်ပေးမယ့် API URL (ဥပမာပုံစံ)
 # သားကြီး သုံးမယ့် API Provider ရဲ့ URL နဲ့ Parameter အတိုင်း ပြန်ပြင်ပေးရပါမယ်။
-API_URL = f"https://sacoliofficial.com/api/name-check/mlbb?user_id={user_id}&server_id={zone_id}"
+API_URL = "https://sacoliofficial.com/api/name-check/mlbb?user_id={user_id}&server_id={zone_id}"
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
