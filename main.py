@@ -7,7 +7,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 # ℹ️ MLBB Region/Account စစ်ပေးမယ့် API URL (ဥပမာပုံစံ)
 # သားကြီး သုံးမယ့် API Provider ရဲ့ URL နဲ့ Parameter အတိုင်း ပြန်ပြင်ပေးရပါမယ်။
-API_URL = "https://api.example.com/mlbb/checker" 
+API_URL = "https://mobile-legends-nickname-region-checker.p.rapidapi.com/mobile-legends" 
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
