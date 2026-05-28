@@ -1,9 +1,8 @@
-python
 import os
 import requests
 import telebot
 
-TOKEN = os.getenv("8847386138:AAFAIbtJIFtAvrocKPi7vRDqIWDBti0RX2o")
+TOKEN = "8847386138:AAFAIbtJIFtAvrocKPi7vRDqIWDBti0RX2o"
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -16,7 +15,10 @@ def check(message):
 
     uid = message.text.strip()
 
-    # Demo API (မင်းနောက်မှပြောင်း)
+    if not uid.isdigit():
+        bot.reply_to(message, "Invalid UID")
+        return
+
     url = f"https://your-api.com/player?uid={uid}"
 
     try:
@@ -31,14 +33,10 @@ def check(message):
         name = data.get("name", "Unknown")
         region = data.get("region", "Unknown")
 
-        bot.reply_to(
-            message,
-            f"Name: {name}\nRegion: {region}\nUID: {uid}"
-        )
+        bot.reply_to(message, f"Name: {name}\nRegion: {region}\nUID: {uid}")
 
     except Exception as e:
         bot.reply_to(message, f"Error: {e}")
 
 print("Bot Running...")
 bot.infinity_polling()
-
