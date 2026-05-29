@@ -2,7 +2,7 @@ import telebot
 import requests
 
 # ⚠️ မိမိရဲ့ Telegram Bot Token ကို ဒီမှာ အစားထိုးပါ
-BOT_TOKEN = '8847386138:AAFAIbtJIFtAvrocKPi7vRDqIWDBti0RX2o'
+BOT_TOKEN = '8847386138:AAGsmgyLgkhoJxuUaB1LYQaX4wvKG99Z5-A'
 bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
